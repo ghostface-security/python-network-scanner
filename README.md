@@ -13,13 +13,13 @@ Prerequisites
 You need to have Python 3 installed on your system. All modules used are part of Python's standard library.
 Running the Script
 Open your terminal or command prompt, navigate to the directory where you saved the script, and run the following command. The optional arguments are shown in brackets [].
-python scanner.py [network_address] [subnet_mask] [port_number_or_range] [-t threads] [-o output_file]
+python netscan.py [network_address] [subnet_mask] [port_number_or_range] [-t threads] [-o output_file]
 
 Example 1: Basic Scan
 To scan the 192.168.1.0/24 network for open port 80:
-python scanner.py 192.168.1.0 /24 80
+python netscan.py 192.168.1.0 /24 80
 
 Example 2: Advanced Scan
 To scan the 10.0.0.0/8 network for a range of ports from 20 to 25, using 100 threads, and saving the output to a file named results.txt:
-python scanner.py 10.0.0.0 /8 20-25 -t 100 -o results.txt
+python netscan.py 10.0.0.0 /8 20-25 -t 100 -o results.txt
 
