@@ -13,9 +13,7 @@ def scan_host(host, ports, timeout):
         try:
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 s.settimeout(timeout)
-                s.connect((host, port))
-                
-                # Grab banner (what service is running?)
+                s.connect((str(host), port))
                 s.sendall(b'GET / HTTP/1.1\r\n\r\n')
                 banner = s.recv(1024).decode(errors='ignore').strip().split('\n')[0]
                 
